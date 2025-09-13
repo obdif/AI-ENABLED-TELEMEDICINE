@@ -145,11 +145,11 @@ export function DoctorHeader() {
                       </a>
                     </Link>
 
-                    <Link href="/family-safety">
+                    {/* <Link href="/family-safety">
                       <a className="text-neutral-600 hover:text-neutral-900 py-2 text-sm font-medium" onClick={() => setIsMenuOpen(false)}>
                         Family Safety
                       </a>
-                    </Link>
+                    </Link> */}
 
                     <Link href="/consultations">
                       <a className="text-neutral-600 hover:text-neutral-900 py-2 text-sm font-medium" onClick={() => setIsMenuOpen(false)}>
