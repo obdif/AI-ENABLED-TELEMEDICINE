@@ -35,7 +35,7 @@ export default function Dashboard() {
       setErrorPatients(null);
       const url = import.meta.env.VITE_API_BASE_URL
         ? `${import.meta.env.VITE_API_BASE_URL}/api/users/all`
-        : "http://localhost:8080/api/users/all";
+        : "https://ilarocare-backend-production.up.railway.app/api/users/all";
       try {
         const token = localStorage.getItem("authToken");
         if (!token) {
@@ -102,7 +102,7 @@ export default function Dashboard() {
       setErrorDoctors(null);
       const url = import.meta.env.VITE_API_BASE_URL
         ? `${import.meta.env.VITE_API_BASE_URL}/api/hospitals/get-doctors`
-        : "http://localhost:8080/api/hospitals/get-doctors";
+        : "https://ilarocare-backend-production.up.railway.app/api/hospitals/get-doctors";
       try {
         const token = localStorage.getItem("authToken");
         if (!token) {
@@ -145,7 +145,7 @@ export default function Dashboard() {
       // This is a placeholder. You NEED to implement this endpoint on your backend.
       const url = import.meta.env.VITE_API_BASE_URL
         ? `${import.meta.env.VITE_API_BASE_URL}/api/hospitals/get-all-consultations` // <--- CHANGE THIS ENDPOINT
-        : "http://localhost:8080/api/hospitals/get-all-consultations"; // <--- CHANGE THIS ENDPOINT
+        : "https://ilarocare-backend-production.up.railway.app/api/hospitals/get-all-consultations"; // <--- CHANGE THIS ENDPOINT
 
       try {
         const token = localStorage.getItem("authToken"); // Assuming the same authToken works for hospital
@@ -482,8 +482,8 @@ export default function Dashboard() {
                         <div className="ml-auto">
                           <span
                             className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${member.status === "online"
-                                ? "bg-green-100 text-green-800"
-                                : "bg-gray-100 text-gray-800"
+                              ? "bg-green-100 text-green-800"
+                              : "bg-gray-100 text-gray-800"
                               }`}
                           >
                             {member.status === "online" ? "Online" : "Offline"}

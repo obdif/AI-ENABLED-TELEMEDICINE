@@ -77,7 +77,7 @@ export default function CreatePatient() {
                 formData.append("image", fileInputRef.current.files[0]);
             }
 
-            const createUrl = `http://localhost:8080/api/users/create`;
+            const createUrl = `https://ilarocare-backend-production.up.railway.app/api/users/create`;
             const response = await axios.post(createUrl, formData, {
                 headers: {
                     "Authorization": `Bearer ${token}`,

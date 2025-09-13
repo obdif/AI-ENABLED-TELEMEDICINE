@@ -38,7 +38,7 @@ export default function Doctors() {
       setError(null);
       const url = import.meta.env.VITE_API_BASE_URL
         ? `${import.meta.env.VITE_API_BASE_URL}/api/hospitals/get-doctors`
-        : "http://localhost:8080/api/hospitals/get-doctors";
+        : "https://ilarocare-backend-production.up.railway.app/api/hospitals/get-doctors";
       try {
         const token = localStorage.getItem("authToken");
         if (!token) {

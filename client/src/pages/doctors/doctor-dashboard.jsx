@@ -58,7 +58,7 @@ export default function DoctorDashboard() {
       }
 
       const response = await axios.get(
-        `http://localhost:8080/api/doctors/get-consultations`,
+        `https://ilarocare-backend-production.up.railway.app/api/doctors/get-consultations`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -93,7 +93,7 @@ export default function DoctorDashboard() {
     setError(null);
     const url = import.meta.env.VITE_API_BASE_URL
       ? `${import.meta.env.VITE_API_BASE_URL}/api/users/all`
-      : "http://localhost:8080/api/users/all";
+      : "https://ilarocare-backend-production.up.railway.app/api/users/all";
     try {
       const token = localStorage.getItem("doctorAuthToken");
       if (!token) {

@@ -37,7 +37,7 @@ export default function Patients() {
       setError(null);
       const url = import.meta.env.VITE_API_BASE_URL
         ? `${import.meta.env.VITE_API_BASE_URL}/api/users/all`
-        : "http://localhost:8080/api/users/all";
+        : "https://ilarocare-backend-production.up.railway.app/api/users/all";
       try {
         const token = localStorage.getItem("authToken");
         // console.log("Fetching from:", url, "with token:", token);

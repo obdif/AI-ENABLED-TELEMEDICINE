@@ -149,7 +149,7 @@ export default function EmergencyAlertModal({ isOpen, setIsOpen }) {
       }
 
       // Fetch all patients using the /api/users/all endpoint
-      const url = "http://localhost:8080/api/users/all";
+      const url = "https://ilarocare-backend-production.up.railway.app/api/users/all";
       const response = await fetch(url, {
         method: "GET",
         headers: {
@@ -292,8 +292,8 @@ export default function EmergencyAlertModal({ isOpen, setIsOpen }) {
                     setError("");
                   }}
                   className={`px-4 py-2 rounded-l-md ${searchMode === "text"
-                      ? "bg-blue-600 text-white"
-                      : "bg-gray-200 text-gray-700"
+                    ? "bg-blue-600 text-white"
+                    : "bg-gray-200 text-gray-700"
                     }`}
                 >
                   Search by Text
@@ -305,8 +305,8 @@ export default function EmergencyAlertModal({ isOpen, setIsOpen }) {
                     setError("");
                   }}
                   className={`px-4 py-2 rounded-r-md ${searchMode === "image"
-                      ? "bg-blue-600 text-white"
-                      : "bg-gray-200 text-gray-700"
+                    ? "bg-blue-600 text-white"
+                    : "bg-gray-200 text-gray-700"
                     }`}
                 >
                   Search by Image
@@ -326,8 +326,8 @@ export default function EmergencyAlertModal({ isOpen, setIsOpen }) {
                     type="submit"
                     disabled={isLoading || !searchQuery.trim()}
                     className={`w-full bg-blue-600 text-white py-3 rounded-lg ${isLoading || !searchQuery.trim()
-                        ? "cursor-not-allowed bg-gray-400"
-                        : "hover:bg-blue-900"
+                      ? "cursor-not-allowed bg-gray-400"
+                      : "hover:bg-blue-900"
                       }`}
                   >
                     {isLoading ? "Searching..." : "Search by Text"}
@@ -382,8 +382,8 @@ export default function EmergencyAlertModal({ isOpen, setIsOpen }) {
                     type="submit"
                     disabled={isLoading || !filePreview}
                     className={`w-full bg-blue-600 text-white py-3 rounded-lg ${isLoading || !filePreview
-                        ? "cursor-not-allowed bg-gray-400"
-                        : "hover:bg-blue-900"
+                      ? "cursor-not-allowed bg-gray-400"
+                      : "hover:bg-blue-900"
                       }`}
                   >
                     {isLoading ? "Searching..." : "Search by Image"}

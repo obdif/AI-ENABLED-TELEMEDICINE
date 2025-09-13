@@ -184,7 +184,7 @@
 //       // Send POST request
 //       const url = import.meta.env.VITE_API_BASE_URL
 //         ? `${import.meta.env.VITE_API_BASE_URL}/api/hospitals/create-doctor`
-//         : "http://localhost:8080/api/hospitals/create-doctor";
+//         : "https://ilarocare-backend-production.up.railway.app/api/hospitals/create-doctor";
 
 //       const response = await axios.post(url, formDataToSend, {
 //         headers: {
@@ -693,7 +693,7 @@ export default function CreateDoctor() {
       // Send POST request
       const url = import.meta.env.VITE_API_BASE_URL
         ? `${import.meta.env.VITE_API_BASE_URL}/api/hospitals/create-doctor`
-        : "http://localhost:8080/api/hospitals/create-doctor";
+        : "https://ilarocare-backend-production.up.railway.app/api/hospitals/create-doctor";
 
       const response = await axios.post(url, payload, {
         headers: {

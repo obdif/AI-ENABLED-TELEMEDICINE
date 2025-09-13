@@ -60,7 +60,7 @@ const CreatePatient = () => {
       }
 
       const response = await axios.post(
-        "http://localhost:8080/api/doctors/create-patient",
+        "https://ilarocare-backend-production.up.railway.app/api/doctors/create-patient",
         {
           username: formData.username.trim(),
           email: formData.email.trim(),

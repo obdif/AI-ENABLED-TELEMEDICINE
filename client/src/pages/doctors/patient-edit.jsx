@@ -61,7 +61,7 @@ export default function EditPatient() {
         }
 
         // Use the proxied URL with cache-busting parameter
-        const profileUrl = `http://localhost:8080/api/hospitals/get-user-profile/${username}?t=${Date.now()}`;
+        const profileUrl = `https://ilarocare-backend-production.up.railway.app/api/hospitals/get-user-profile/${username}?t=${Date.now()}`;
         console.log("Attempting to fetch from:", profileUrl);
 
         const profileResponse = await axios.get(profileUrl, {
@@ -235,7 +235,7 @@ export default function EditPatient() {
         lastRequest: jsonData,
       }));
 
-      const updateJsonUrl = `http://localhost:8080/api/hospitals/update-user-profile/${username}`;
+      const updateJsonUrl = `https://ilarocare-backend-production.up.railway.app/api/hospitals/update-user-profile/${username}`;
       // console.log("Updating patient with JSON at:", updateJsonUrl);
 
       const jsonResponse = await axios.put(updateJsonUrl, jsonData, {

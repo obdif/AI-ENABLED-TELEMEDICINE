@@ -26170,7 +26170,8 @@ function P3() {
     (async () => {
       var j, P, A, _;
       d(!0), p(null);
-      const E = "http://localhost:8080/api/users/all";
+      const E =
+        "https://ilarocare-backend-production.up.railway.app/api/users/all";
       try {
         const L = localStorage.getItem("authToken");
         if ((console.log("Fetching from:", E, "with token:", L), !L))
@@ -33358,7 +33359,7 @@ const BB = () => {
       r(!0);
       try {
         const d = await Te.post(
-            "http://localhost:8080/api/hospitals/login",
+            "https://ilarocare-backend-production.up.railway.app/api/hospitals/login",
             c,
             { headers: { "Content-Type": "application/json" } }
           ),
@@ -34760,7 +34761,8 @@ const wU = () => {
         o(!0);
         try {
           console.log("Sending Sign Up Data:", d);
-          let f = "http://localhost:8080/api/hospitals/register";
+          let f =
+            "https://ilarocare-backend-production.up.railway.app/api/hospitals/register";
           console.log("Sending request to:", f);
           const p = await Te.post(f, d, {
             headers: { "Content-Type": "application/json" },
@@ -37405,7 +37407,7 @@ function RU() {
             );
           if (!e || typeof e != "string" || e.trim() === "")
             throw new Error("Invalid username.");
-          const y = `http://localhost:8080/hospitals/Get-User-Profile/${e}`;
+          const y = `https://ilarocare-backend-production.up.railway.app/hospitals/Get-User-Profile/${e}`;
           console.log("Attempting to fetch from:", y);
           let m;
           try {
@@ -37418,7 +37420,8 @@ function RU() {
               console.log("Patient Profile API Response:", m.data);
           } catch {
             console.warn("Primary endpoint failed, attempting fallback...");
-            const N = "http://localhost:8080/api/users/all";
+            const N =
+              "https://ilarocare-backend-production.up.railway.app/api/users/all";
             console.log("Fetching all users from:", N);
             const E = await Te.get(N, {
               headers: {
@@ -37934,7 +37937,8 @@ function kU() {
           );
         if (!e || typeof e != "string" || e.trim() === "")
           throw new Error("Invalid username.");
-        const V = "http://localhost:8080/api/users/all";
+        const V =
+          "https://ilarocare-backend-production.up.railway.app/api/users/all";
         console.log("Fetching all users from:", V);
         const I = await Te.get(V, {
           headers: {
@@ -38020,7 +38024,7 @@ function kU() {
           throw new Error(
             "No authentication token found. Redirecting to sign-in..."
           );
-        const V = `http://localhost:8080/hospitals/update-user-profile/${e}`,
+        const V = `https://ilarocare-backend-production.up.railway.app/hospitals/update-user-profile/${e}`,
           I = new FormData();
         Object.entries(r).forEach(([$, H]) => {
           I.append($, H);

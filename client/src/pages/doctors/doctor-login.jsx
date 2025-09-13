@@ -60,7 +60,7 @@ export default function DoctorLogin() {
 
     try {
       console.log("Sending login request with:", formData);
-      const response = await axios.post("http://localhost:8080/api/doctors/login", formData, {
+      const response = await axios.post("https://ilarocare-backend-production.up.railway.app/api/doctors/login", formData, {
         headers: {
           "Content-Type": "application/json",
         },

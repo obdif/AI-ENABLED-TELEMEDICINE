@@ -61,7 +61,7 @@ export default function PatientDetails() {
         const profileUrl = import.meta.env.VITE_API_BASE_URL
           ? `${import.meta.env.VITE_API_BASE_URL
           }/api/hospitals/get-user-profile/${username}`
-          : `http://localhost:8080/api/hospitals/get-user-profile/${username}`;
+          : `https://ilarocare-backend-production.up.railway.app/api/hospitals/get-user-profile/${username}`;
         const cacheBuster = new Date().getTime();
         const fullUrl = `${profileUrl}?t=${cacheBuster}`;
         // console.log("Attempting to fetch from:", fullUrl);

@@ -89,7 +89,7 @@ export default function Consultant({ onClose }) {
     const fetchPatients = async () => {
       setLoadingPatients(true);
       setErrorPatients(null);
-      const url = "http://localhost:8080/api/users/all";
+      const url = "https://ilarocare-backend-production.up.railway.app/api/users/all";
       try {
         const token = localStorage.getItem("doctorAuthToken");
         if (!token) {
@@ -351,7 +351,7 @@ export default function Consultant({ onClose }) {
 
       console.log("Sending JSON payload to backend:", jsonData);
 
-      const response = await fetch("http://localhost:8080/api/doctors/consultation", {
+      const response = await fetch("https://ilarocare-backend-production.up.railway.app/api/doctors/consultation", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

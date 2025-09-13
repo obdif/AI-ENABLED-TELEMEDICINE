@@ -25,7 +25,7 @@ const FamilyMedicalModal = ({ isOpen, setIsOpen, username }) => {
       if (!token) throw new Error("No authentication token found");
 
       const apiResponse = await axios.post(
-        "http://localhost:8080/api/pack/summarize-history",
+        "https://ilarocare-backend-production.up.railway.app/api/pack/summarize-history",
         { username, medicalInfo },
         { headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" } }
       );

@@ -37,7 +37,7 @@ export default function ViewConsultation() {
         // Use the backend endpoint that fetches consultations by username
         // Based on previous responses, it was:
         const response = await axios.get(
-          `http://localhost:8080/api/doctors/get-consultations?username=${username}`,
+          `https://ilarocare-backend-production.up.railway.app/api/doctors/get-consultations?username=${username}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

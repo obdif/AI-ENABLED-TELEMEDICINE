@@ -56,7 +56,7 @@ const SignUp = () => {
 
       let url = import.meta.env.VITE_API_BASE_URL
         ? `${import.meta.env.VITE_API_BASE_URL}api/hospitals/register`
-        : "http://localhost:8080/api/hospitals/register";
+        : "https://ilarocare-backend-production.up.railway.app/api/hospitals/register";
 
       console.log("Sending request to:", url);
 
